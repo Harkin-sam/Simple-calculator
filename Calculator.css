@@ -1,0 +1,75 @@
+*{  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+html{
+    font-family:cursive;
+}
+
+body {
+    background-color: rgb(18, 26, 31);  /*background: linear-gradient(to right, #00AAFF, #00FF6C);*/
+    min-height: 100vh;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(135px, auto) repeat(5, 100px);
+    background-color: rgb(39, 55, 59);
+    border-radius: 9px;
+    color: whitesmoke;
+    overflow: hidden;
+}
+
+.output{
+    grid-column: 1/-1; /*this means column will begin from start to end*/ 
+    padding: 10px;
+    text-align: right;
+    font-size: 1.4rem;
+    background-color: rgb(182, 182, 182);
+    position: relative;
+    word-wrap: break-word;
+    word-break: break-all; 
+}
+
+.button{
+    background-color: rgb(39, 55, 59);
+    border: 0.5px solid rgba(92, 92, 92, 0.137);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.display1{
+    opacity: 0.4;
+
+}
+
+.display2{
+    color:rgb(18, 26, 31);
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.temp-result{
+    position: absolute;
+    bottom: 6px;
+    opacity: 0.4;
+    left: 20px;
+}
+
+.button:hover {
+    background-color: rgb(30, 43, 46);
+}
